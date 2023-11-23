@@ -1,0 +1,81 @@
+.Container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormContainer {
+  width: 40rem;
+  height: 45rem;
+  background-color: rgba(33, 33, 33, 1);
+  display: flex;
+  padding: 3rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.FormContainer label {
+  color: #e74c3c;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.FormContainer input::placeholder,
+.FormContainer select::placeholder {
+  color: #e74c3c;
+}
+
+.FormContainer input {
+  outline: none;
+  border: 1px solid #3498db;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  padding: 0.7rem;
+  width: 20rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+.FormContainer select {
+  width: 20rem;
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  border: 1px solid #3498db;
+  outline: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.FormContainer button {
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem 3.5rem;
+  border: 2px solid #fff;
+  outline: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FormContainer button:hover {
+  color: #fff;
+  background-color: #fff;
+  color: #e74c3c;
+  cursor: pointer;
+  border: 1px solid #e74c3c;
+}
+
+.Error {
+  color: #e74c3c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}

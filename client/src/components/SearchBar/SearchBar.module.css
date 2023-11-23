@@ -1,0 +1,35 @@
+.ContainerSearchBar form {
+  display: flex;
+}
+
+.ContainerSearchBar input {
+  border: 1px solid rgba(33, 33, 33, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 0.2rem;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ContainerSearchBar button {
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid #e74c3c;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  background-color: #e74c3c;
+  cursor: pointer;
+}
+
+.ContainerSearchBar button:hover {
+  color: #e74c3c;
+  background-color: #fff;
+  border: 1px solid #3498db;
+}
+
+.ContainerSearchBar button box-icon {
+  color: #fff;
+}

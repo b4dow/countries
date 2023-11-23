@@ -1,0 +1,38 @@
+.NavContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(33, 33, 33, 0.5);
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.NavLogo h2 {
+  font-size: 1.6rem;
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.NavLogo h2 span {
+  font-size: 1rem;
+  color: #ffff01;
+  display: block;
+}
+
+.Nav {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Nav:hover {
+  color: #e74c3c;
+}
+
+.NavActive {
+  color: #e74c3c;
+}

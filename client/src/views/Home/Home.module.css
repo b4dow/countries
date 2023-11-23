@@ -1,0 +1,64 @@
+.Container {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
+
+.Filtered {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.Filtered button {
+  border: 2px solid #fff;
+  outline: none;
+  background-color: #e74c3c;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+.Filtered button:hover {
+  background-color: #fff;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  cursor: pointer;
+}
+
+.Filtered select {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 2px solid #e74c3c;
+}
+
+.Paginate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.Paginate span {
+  font-size: 1.5rem;
+}
+
+.Paginate button {
+  padding: 1rem 2rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin: 1rem;
+  border: 1px solid #e74c3c;
+  background-color: #e74c3c;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+}
+
+.Paginate button:hover {
+  color: #fff;
+  border: 2px solid #e74c3c;
+  background-color: transparent;
+}
