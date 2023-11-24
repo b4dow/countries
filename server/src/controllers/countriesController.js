@@ -23,7 +23,7 @@ const getAllCountriesDB = async name => {
       )
     return FilterCountryByName
   } else if (!countryDB.length) {
-    const { data } = await axios('http://localhost:5000/countries/')
+    const { data } = await axios.get('http://localhost:5000/countries/')
     await data.forEach(async country => {
       await Country.findOrCreate({
         where: {

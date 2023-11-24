@@ -26,7 +26,7 @@ const Detail = () => {
             <span>ID </span> {country.id}
           </h2>
           <h2>
-            <span>Nombre </span>
+            <span>NOMBRE </span>
             {country.nombre}
           </h2>
           <h2>

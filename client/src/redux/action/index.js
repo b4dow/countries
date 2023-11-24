@@ -37,17 +37,27 @@ export const getActivities = () => async dispatch => {
   }
 }
 
-export const getCountriesByID = id => async dispatch => {
-  try {
-    const { data } = await axios(`http://localhost:3001/countries/${id}`)
-    console.log(data)
-    dispatch({
-      type: SET_COUNTRIES_BY_ID,
-      payload: data
-    })
-  } catch (error) {
-    alert('HUBO UN ERROR AL MOSTRAR EL PAIS POR ID')
-  }
+export const getCountriesByID = id => dispatch => {
+  // try {
+  //   const { data } = await axios(`http://localhost:3001/countries/${id}`)
+  //   dispatch({
+  //     type: SET_COUNTRIES_BY_ID,
+  //     payload: data
+  //   })
+  // } catch (error) {
+  //   alert('HUBO UN ERROR AL MOSTRAR EL PAIS POR ID')
+  // }
+
+  axios
+    .get(`http://localhost:3001/countries/${id}`)
+    .then(response => response.data)
+    .then(data =>
+      dispatch({
+        type: SET_COUNTRIES_BY_ID,
+        payload: data
+      })
+    )
+    .catch(error => console.log(error))
 }
 
 export const postActivities = (info, time) => async dispatch => {

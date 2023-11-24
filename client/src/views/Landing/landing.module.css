@@ -23,6 +23,10 @@
   background-color: #e74c3c;
 }
 
+.ButtonLanding:hover {
+  box-shadow: 1px 4px 20px #e74c3c;
+}
+
 .LinkLanding {
   text-decoration: none;
   color: #fff;

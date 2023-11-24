@@ -1,6 +1,6 @@
 const regexNombre = /^[a-zA-Z0-9\sáéíóúüñÁÉÍÓÚÜÑ]{3,25}$/
 const regexDificultad = /^[0-5]$/
-const regexDuracion = /^(1?[0-9]|4[0-8])$/
+const regexDuracion = /^(1?[0-9]|2[0-4])$/
 const regexTemporada = /^[a-zA-ZñÑ]+$/
 
 const validate = input => {

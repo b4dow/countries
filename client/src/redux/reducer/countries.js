@@ -20,8 +20,7 @@ const initialState = {
   activities: [],
   activitiesBackup: [],
   currentPage: 0,
-  filter: false,
-  totalActivities: 0
+  filter: false
 }
 
 const countriesReducer = (state = initialState, { type, payload }) => {
@@ -126,42 +125,28 @@ const countriesReducer = (state = initialState, { type, payload }) => {
         filter: true,
         totalCountries: Math.ceil(filterbyContinents.length / ITEM_PER_PAGE)
       }
-    // case FILTER_BY_ACTIVITY:
-    //   if (payload === 'seleccionar') {
-    //     return state
-    //   }
+    case FILTER_BY_ACTIVITY:
+      if (payload === 'seleccionar') {
+        return state
+      }
 
-    //   const filterByAllActivities = [...state.activitiesBackup].filter(
-    //     activity => activity.nombre
-    //   )
+      const filteredCountries = [...state.countriesBackup].filter(country => {
+        return (
+          country.Activities &&
+          country.Activities.some(activity => activity.nombre === payload)
+        )
+      })
 
-    //   //     const countriesWithFilteredActivities = [...state.countriesBackup].map(country => {
-    //   //       const filteredActivities = filterByAllActivities.filter(activity =>
-    //   //         country.Activities.some(countryActivity => {
-    //   //          countryActivity.id === activity.id})
-    //   // });
+      console.log(state.totalActivities)
 
-    //   const countriesWithFilteredActivities = [...state.countriesBackup].map(
-    //     country => {
-    //       const filteredActivities = filterByAllActivities.filter(activity => {
-    //         country.Activities.some(countryActivity => {
-    //           countryActivity.id === activity.id
-    //         })
-    //       })
-    //       return filteredActivities
-    //     }
-    //   )
-    //   console.log(countriesWithFilteredActivities)
-
-    //   console.log(Math.ceil(filterActivitiesByCountries.length / ITEM_PER_PAGE))
-
-    //   return {
-    //     ...state,
-    //     countries: [...filteredActivities].splice(0, ITEM_PER_PAGE),
-    //     countriesFiltered: filteredActivities,
-    //     filter: true,
-    //     totalActivities: Math.ceil(filteredActivities.length / ITEM_PER_PAGE)
-    //   }
+      return {
+        ...state,
+        countries: [...filteredCountries].splice(0, ITEM_PER_PAGE),
+        countriesFiltered: filteredCountries,
+        filter: true,
+        totalCountries: Math.ceil(filteredCountries.length / ITEM_PER_PAGE),
+        currentPage: 0
+      }
 
     case ORDER_BY_NAME:
       let orderByName = []
